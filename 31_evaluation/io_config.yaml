@@ -1,0 +1,47 @@
+server:
+  name: kronos.ifs.tuwien.ac.at               # Server domain
+  username: pham                    # Username
+  password: Poiuyt227867                     # Password
+
+paths:
+  base_server_dir: "/newstorage2/gaia"          # Base directory on the server
+  base_local_dir: "data"                        # Base directory on the local machine
+  temp_dir: "tmp"                               # Temporary directory on the server
+  server_repo_root: "/newstorage2/gaia/wp4/code/wp4"    # Path to the code repository on the server
+  server_python_executable: "/home/salva/miniconda3/envs/wp4_env/bin/python" # Path to the python executable on the server
+
+files:
+  aoi_gpkg: "inventory/Projektgebiet_Kaernten.gpkg" # Path to the AOI geopackage file
+  aoi_shp: "inventory/Projektgebiet_Kaernten.shp"   # Path to the AOI shapefile
+  aoi_shx: "inventory/Projektgebiet_Kaernten.shx"   # Path to the AOI shapefile
+  aoi_cpg: "inventory/Projektgebiet_Kaernten.cpg"   # Path to the AOI shapefile
+  aoi_dbf: "inventory/Projektgebiet_Kaernten.dbf"   # Path to the AOI shapefile
+  aoi_prj: "inventory/Projektgebiet_Kaernten.prj"   # Path to the AOI shapefile
+  inventory_gpkg: "inventory/fixed_inventar_kaernten.gpkg"    # Path to the landslide inventory geopackage file
+  inventory_shp: "inventory/Massenbewegungen_im_Detail.shp"   # Path to the landslide inventory shapefile
+  inventory_poly_shp: "inventory/Rutschungsflaechen.shp"      # Path to the landslide inventory shapefile
+  inventory_poly_gpkg: "inventory/fixed_inventar_kaernten.gpkg"      # Path to the landslide inventory shapefile
+  records: "operation_records/records.csv"                    # Path to the operation records file
+  records_cd: "operation_records/records_cd.csv"              # Path to the change detection operation records file
+  results_cd: "operation_records/results_cd.csv"              # Path to the change detection results file
+  all_images:
+    raw: "operation_records/all_images_raw.csv"           # Path to the RAW all_images file
+    crop: "operation_records/all_images_crop.csv"         # Path to the CROP all_images file
+    nci: "operation_records/all_images_nci.csv"           # Path to the NCI all_images file
+    delta: "operation_records/all_images_delta.csv"       # Path to the DELTA all_images file
+
+metadata:
+  tiles:    # List of tiles
+    - 33TUM
+    - 33TUN
+    - 33TVM
+    - 33TVN
+  years:    # List of years
+    - 2018
+    - 2019
+    - 2020
+    - 2021
+    - 2022
+  products: # List of products
+    - NDVI_raw              # Alias: NDVIraw
+    - NDVI_reconstructed    # Alias: NDVIrec

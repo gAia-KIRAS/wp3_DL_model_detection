@@ -1,0 +1,11 @@
+#tensorflow-cpu==2.8.0
+tensorflow-gpu==2.8.0
+numpy==1.23.5
+scipy==1.10.1
+pillow==10.0.0
+opencv-python==4.8.0.74
+natsort==8.4.0 
+keras
+h5py==3.9.0    
+#matplotlib==3.7.2 
+rasterio

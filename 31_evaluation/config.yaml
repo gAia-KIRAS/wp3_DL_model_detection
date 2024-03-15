@@ -1,0 +1,35 @@
+paths:    
+  data: data          # Name of the data folder
+
+profiling:
+  active: True        # Whether to profile the code. Can be True or False
+  browser: False      # Whether to open the browser after profiling. Can be True or False
+
+nci:                        # Parameters for the NCI module
+  n_size: 3                 # Neighborhood size: 1, 3, 5, 7, 9... (e.g.: 3 means a 3x3 neighborhood around each pixel)
+  conv_lib: torch           # Can be [torch, tf]. The library used to compute the convolution. On the server, torch is used
+
+cd:
+  cd_id: "Version"   # Any name to identify the execution. It is used to continue and execution
+  threshold: 0.995                    # Threshold for detection probability in [0,1]
+  type: "log_reg"                     # Can be 'basic_mean', 'nci_logic', 'log_reg'. 
+                                      # They are different calculation methods for the change probability 
+
+eval:
+  #cd_id: "xxx_v1_1"   # Name of the change detection execution to evaluate  : for my01_result_cd.csv
+  cd_id: "Version_v1.1"   # Name of the change detection execution to evaluate
+  type: "both"                        # What ground truth landslide inventory to use: points, polygons, both
+  baseline_eval: False                # Whether to evaluate the baseline (i.e. random predictions)
+  build_train_dataset: False          # Whether to build the train dataset
+  take_positives: False               # Whether to take only the positive samples
+
+
+execute:
+  where: local                    # local, server. Can also be: update_server, update_local
+  module: eval                    # The module to execute. Can be nci, cd, delta, eval, btds. 
+  time_limit: 60                  # Time limit in minutes for the module execution
+  filters:                        # If empty list, all images will be processed
+    tile: []                 # List of tiles to process. Can be empty list
+    year: []                      # List of years to process. Can be empty list
+    product: [NDVI_reconstructed] # List of products to process. Should be NDVI_reconstructed
+
