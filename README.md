@@ -62,7 +62,7 @@
 
   + Run the scirp **'step02_gen_csv.sh'** for the step 02
 
-## Step 03: Evaluate csv file
+## Step 03: Evaluate csv file (the csv file contains latitude and longitude positions where the landslide is detected) and compared with the ground truth provided by SBA (project leader)
   1/ Conda setting for the step 03:  Reuse the conda environment from the step 02 (example: ls01)
 
   2/ Input, output, and how to run the step 02:
@@ -73,7 +73,7 @@
     
         - First, go to the directory with the commandline: 'cd ./31_evaluation/src'
 
-        - Second, run the bash scrip:  'step03_evaluate.sh  > log'
+        - Second, run the bash scrip:  'step03_evaluate.sh  > log'   (this script is provided by SBA project leader)
     
         - Finally, check the 'log' file
 
