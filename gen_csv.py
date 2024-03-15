@@ -188,6 +188,9 @@ for ifile in file_list:
                 print('ERROR: The lat/lontitude with landslide detections are not in AOI --> No CSV file is generated --> EXIT')
                 exit()
             else:
+                if not os.path.exists('12_output_csv'):
+                    os.makedirs('12_output_csv')
+
                 store_dir = './12_output_csv'
                 if not os.path.exists(store_dir):
                     os.makedirs(store_dir)

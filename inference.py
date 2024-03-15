@@ -241,6 +241,9 @@ def savePrediction(file_name, pred_list, save_opt='pkl'):
         return 
 
     ## check if file name exist or not   
+    if not os.path.exists('11_output_pkl'):
+        os.makedirs('11_output_pkl')
+
     file_name = './11_output_pkl/' +  file_name + file_tail
     if os.path.exists(file_name):
         print('Duplicated file name ?')
