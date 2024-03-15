@@ -54,6 +54,7 @@
      
      pip install -r requirements_02.txt
 
+ 2/ Input, output, and how to run the step 02:
 
   + Require the **input plk file** available in the directory: **'./11_output_pkl'**
 
@@ -62,13 +63,18 @@
   + Run the scirp **'step02_gen_csv.sh'** for the step 02
 
 ## Step 03: Evaluate csv file
-  - setup for step 03: use the same setup from the step 02(conda environment: ls02)
+  1/ Conda setting for the step 03:  Reuse the conda environment from the step 02 (example: ls01)
 
-  - require the csv file available in the directory: ./12_output_csv
+  2/ Input, output, and how to run the step 02:
 
-  - run the scirpt:
-        - First, go to the directory with the commandline: cd ./31_evaluation/src
-        - Second, run the bash scrip:  step03_evaluate.sh  > log
+  + Require the **input csv file** available in the directory: **'./12_output_csv'**
+
+  + Run the scirpt:
+    
+        - First, go to the directory with the commandline: **cd ./31_evaluation/src**
+
+        - Second, run the bash scrip:  **'step03_evaluate.sh  > log'**
+    
         - Finally, check the 'log' file
 
 
