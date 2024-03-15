@@ -13,11 +13,11 @@
     + These bash scripts are currently written to run on server with SLURM manager. Users may need to modify to adapt users' server or local machine
 
 
-2/ This source code is only for running and evaluating one image of 10980x10980x5 which matches the data provided in gAia project. However users can modify the code to run with different sizes of input image.The minimum size of image is 128x128x5
+2/ This source code is only for running and evaluating one image of 10980x10980x5 which matches the data provided in gAia project. However users can modify the code to run with different sizes of input image.The minimum size of the input image is 128x128x5
 
 
-## Step 01: Use pre-trained deep learning model to predict and generate pkl file
-  1/ setup for step 01:
+## Step 01: Use the pre-trained deep learning model to predict landslide and generate pkl file
+  1/ Conda settings for the step 01:
   
      conda create --name ls01 python==3.8.0
      
@@ -27,9 +27,9 @@
      
      pip install protobuf==3.20.*
 
- 2/ Input/output and run the step 01:
+ 2/ Input, output, and how to run the step 01:
  
-  + require the input directory (./02_input_images/) which contains the Sentinel-2 images
+  + Require the input directory (./02_input_images/) which contains the Sentinel-2 images with 5 bands (For an example: 33_T_UN_2018_3_S2A_33TUN_20180327_1_L2A_B02.tif, 33_T_UN_2018_3_S2A_33TUN_20180327_1_L2A_B03.tif, 33_T_UN_2018_3_S2A_33TUN_20180327_1_L2A_B04.tif, 33_T_UN_2018_3_S2A_33TUN_20180327_1_L2A_B08.tif, 33_T_UN_2018_3_S2A_33TUN_20180327_1_L2A_B11.tif)
 
   + the output pkl file will be stored in the directory:  './11_output_pkl'
 
