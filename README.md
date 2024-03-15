@@ -16,10 +16,8 @@ I/ General
 2/ The code is only for running and evaluating one sample (one large image of 10980x10980x5). Users need to modify the code to run massively.
 
 
-## Running 
-## step 01
-+ Step 01: Use pre-trained deep learning model to predict and generate pkl file
-  - setup for step 01:
+## step 01: Use pre-trained deep learning model to predict and generate pkl file
+  1/ setup for step 01:
      conda create --name ls01 python==3.8.0
      conda activate ls01
      pip install -r requirements_01.txt
