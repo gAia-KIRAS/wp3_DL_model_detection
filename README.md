@@ -71,9 +71,9 @@
 
   + Run the scirpt:
     
-        - First, go to the directory with the commandline: **cd ./31_evaluation/src**
+        - First, go to the directory with the commandline: 'cd ./31_evaluation/src'
 
-        - Second, run the bash scrip:  **'step03_evaluate.sh  > log'**
+        - Second, run the bash scrip:  'step03_evaluate.sh  > log'
     
         - Finally, check the 'log' file
 
