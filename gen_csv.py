@@ -106,7 +106,8 @@ def find_image_pixel_lat_lon_coord(image_filenames, output_filename):
 
 #------------------------------------------- Main Function Here
 org_image_size = 10980
-tif_data_dir = '/var/data/storage/datasets/image/01_AI_for_Earth/02_slandslide/04_data_gaia_S2/'
+#tif_data_dir = '/var/data/storage/datasets/image/01_AI_for_Earth/02_slandslide/04_data_gaia_S2/'
+tif_data_dir = './02_input_images'
 
 ifolder_pkl = './11_output_pkl'
 file_list   = os.listdir(ifolder_pkl)
@@ -167,7 +168,8 @@ for ifile in file_list:
 
                             #---- Infer the Lat/Longitude postions from row and col
                             full_file_name  = ifile.split('.')[0]+'B02.tif'
-                            tif_file_dir    = os.path.join(tif_data_dir, info_year, info_tiles, 'tmp', full_file_name)
+                            #tif_file_dir    = os.path.join(tif_data_dir, info_year, info_tiles, 'tmp', full_file_name)
+                            tif_file_dir    = os.path.join(tif_data_dir, full_file_name)
                             lat, lon  = pixel2coord(tif_file_dir, float(global_col), float(global_row))
 
                             #----- Add by Lam Pham to check if the position (lat,lon) is in AOI 
