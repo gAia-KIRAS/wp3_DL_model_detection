@@ -13,7 +13,7 @@
     + These bash scripts are currently written to run on server with SLURM manager. Users may need to modify to adapt users' server or local machine
 
 
-2/ The code is only for running and evaluating one sample (one large image of 10980x10980x5). Users need to modify the code to run massively.
+2/ This source code is only for running and evaluating one image of 10980x10980x5 which matches the data provided in gAia project. However users can modify the code to run with different sizes of input image.The minimum size of image is 128x128x5
 
 
 ## Step 01: Use pre-trained deep learning model to predict and generate pkl file
