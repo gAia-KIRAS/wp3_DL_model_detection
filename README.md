@@ -29,7 +29,7 @@
 
  2/ Input, output, and how to run the step 01:
  
-  + Require the input directory (**./02_input_images/**) which contains the Sentinel-2 images with 5 bands (For an example: 33_T_UN_2018_3_S2A_33TUN_20180327_1_L2A_B02.tif, 33_T_UN_2018_3_S2A_33TUN_20180327_1_L2A_B03.tif, 33_T_UN_2018_3_S2A_33TUN_20180327_1_L2A_B04.tif, 33_T_UN_2018_3_S2A_33TUN_20180327_1_L2A_B08.tif, 33_T_UN_2018_3_S2A_33TUN_20180327_1_L2A_B11.tif)
+  + Require the input directory (**./02_input_images/**) which contains the Sentinel-2 images with 5 bands (For an example: 33_T_UN_2018_3_S2A_33TUN_20180327_1_L2A_B02.tif, 33_T_UN_2018_3_S2A_33TUN_20180327_1_L2A_B03.tif, 33_T_UN_2018_3_S2A_33TUN_20180327_1_L2A_B04.tif, 33_T_UN_2018_3_S2A_33TUN_20180327_1_L2A_B08.tif, 33_T_UN_2018_3_S2A_33TUN_20180327_1_L2A_B11.tif). Therefore, users need to create this folder (**./02_input_images/**) with the tif file data inside. This folder (**./02_input_images/**) is at the same directory of this repo.
   
   + Require the pretrained model at the directory (**01_pre_trained_models/model.h5**).  As the pretrained model is large (286 MB) and has not added into this github. Please contact the SBA (project lead) to get the model. Currently, it is available on Kronos server. 
 
