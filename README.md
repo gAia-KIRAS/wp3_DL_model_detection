@@ -1,16 +1,16 @@
 ## WP3: Deep Learning Model For LandSlide Detection using Sentinel-2 Remote Sensing Image
 
-I/ General
+## General:
 
 1/ To run this model, there are 3 steps:
 
-    + The step 01 uses the first conda environment (example: ls01)
+    The step 01 uses the first conda environment (example: ls01)
     
-    + The step 02 and step 03 use the second conda environment as this is related to the python package 'osgeo' (example: ls02)
+    The step 02 and step 03 use the second conda environment as this is related to the python package 'osgeo' (example: ls02)
     
-    + Three bash scripts of 'step01_gen_pkl.sh', 'step02_gen_csv.sh', 'step03_evaluate.sh' are used to run the step 01, the step 02, the step 03 respectively.
+    Three bash scripts of 'step01_gen_pkl.sh', 'step02_gen_csv.sh', 'step03_evaluate.sh' are used to run the step 01, the step 02, the step 03 respectively.
     
-    + These bash scripts are currently written to run on server with SLURM manager. Users may need to modify to adapt users' server or local machine
+    These bash scripts are currently written to run on server with SLURM manager. Users may need to modify to adapt users' server or local machine
 
 
 2/ The code is only for running and evaluating one sample (one large image of 10980x10980x5). Users need to modify the code to run massively.
