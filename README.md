@@ -31,7 +31,7 @@
  
   + Require the input directory (**./02_input_images/**) which contains the Sentinel-2 images with 5 bands (For an example: 33_T_UN_2018_3_S2A_33TUN_20180327_1_L2A_B02.tif, 33_T_UN_2018_3_S2A_33TUN_20180327_1_L2A_B03.tif, 33_T_UN_2018_3_S2A_33TUN_20180327_1_L2A_B04.tif, 33_T_UN_2018_3_S2A_33TUN_20180327_1_L2A_B08.tif, 33_T_UN_2018_3_S2A_33TUN_20180327_1_L2A_B11.tif)
   
-  + Require the pretrained model at the directory (**01_pre_trained_models/model.h5**).  As the pretrained model is large and has not added into this github. Please contact the SBA (project lead) to get the model. Currently, it is available on Kronos server. 
+  + Require the pretrained model at the directory (**01_pre_trained_models/model.h5**).  As the pretrained model is large (286 MB) and has not added into this github. Please contact the SBA (project lead) to get the model. Currently, it is available on Kronos server. 
 
   + The output **pkl** file will be automatically stored in the directory:  **'./11_output_pkl'**
 
@@ -40,23 +40,28 @@
   + **NOTE**:  Estimate time for one image of 10980x10980x5 (7396 small image of 128x128x5): 10 minutes with gpu 2080 (11 GB) ---> need to use gpu for the step 01 as the pre-trained deep learning model is large and running with the batch size of 30 of 128x128x5.
 
 ## Step 02: Generate csv file from plk file
-  - setup for step 02 (note that installing gdal depends on Conda version, the current version is conda 22):
+  1/ Conda setting for the step 02 (note that installing gdal depends on Conda version, the current version is **conda 22**):
+  
      conda create --name ls02
+     
      conda activate ls02
+     
      conda install gdal
+     
      pip install Pillow
+     
      pip install shapely
+     
      pip install -r requirements_02.txt
 
 
-  - require the plk file available in the directory: ./11_output_pkl
+  + Require the **input plk file** available in the directory: **'./11_output_pkl'**
 
-  - the output csv file will be stored in the directory: ./12_output_csv/
+  + The **output csv file** will be automatically stored in the directory: **'./12_output_csv/'**.  The csv follow the standard format that the gAia project require without the header.
 
-  - run the scirpt: step02_gen_csv.sh
+  + Run the scirp **'step02_gen_csv.sh'** for the step 02
 
-#----- step 03
-+ Step 03: Evaluate csv file
+## Step 03: Evaluate csv file
   - setup for step 03: use the same setup from the step 02(conda environment: ls02)
 
   - require the csv file available in the directory: ./12_output_csv
